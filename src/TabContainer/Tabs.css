@@ -1,0 +1,94 @@
+.tab-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 85%;
+  height: 80%;
+  margin-top: 2rem;
+  align-content: center;
+}
+
+.bloc-tab {
+  display: flex;
+  width: 100%;
+  border-bottom: solid;
+  border-color: rgba(49, 49, 49, 0.041);
+  margin-bottom: 25px;
+}
+.tab {
+  padding: 15px;
+  text-align: center;
+  width: 10%;
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+.tab:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tab {
+  background: white;
+  border-bottom: 1px solid transparent;
+}
+
+.active-tab::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 3px;
+  background: rgb(88, 147, 241);
+}
+
+.content-tab {
+  flex-grow: 1;
+}
+.content {
+  background: white;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.active-content {
+  display: block;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+
+.stat-table {
+  height: 100%;
+  /* width: 100%; */
+}
+
+.stat-name {
+  width: 14%;
+}
+
+.about-table {
+  height: 100%;
+  width: 100%;
+}
+
+.about-table tr {
+  height: 20%;
+}
+
+.about-name {
+  width: 18%;
+}

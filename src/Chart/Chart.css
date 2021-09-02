@@ -1,0 +1,30 @@
+.range-view {
+  background-color: rgba(128, 128, 128, 0.37);
+  width: 100%;
+  border-radius: 100rem;
+  overflow: hidden;
+  height: 5px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.range-view::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: var(--percent);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  background-color: #000;
+  animation: fill 0.3s backwards;
+}
+
+.range-view.green::after {
+  background-color: #5bc686;
+}
+
+.range-view.red::after {
+  background-color: #fb7171;
+}
