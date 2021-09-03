@@ -32,5 +32,5 @@ const PokemonDetails = (props) => {
     </>
   )
 }
-
+// test
 export default PokemonDetails
