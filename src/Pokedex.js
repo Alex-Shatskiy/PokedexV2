@@ -3,7 +3,7 @@ import Details from "./Details"
 import EachPokemon from "./EachPokemon"
 
 const Pokedex = (props) => {
-  const { allPokemon } = props
+  const { search, allPokemon } = props
 
   const [isOpen, setIsOpen] = useState(false)
   const [selectedPokemon, setSelectedPokemon] = useState([])
@@ -19,13 +19,15 @@ const Pokedex = (props) => {
           setIsOpen={setIsOpen}
         />
       )}
-      {allPokemon.map((pokemon) => {
+      {allPokemon.map((pokemon, i) => {
         return (
-          <EachPokemon
-            pokemon={pokemon}
-            setSelectedPokemon={setSelectedPokemon}
-            setIsOpen={setIsOpen}
-          />
+          pokemon.name.includes(search) && (
+            <EachPokemon
+              pokemon={pokemon}
+              setSelectedPokemon={setSelectedPokemon}
+              setIsOpen={setIsOpen}
+            />
+          )
         )
       })}
     </>

@@ -1,6 +1,7 @@
 import Modal from "react-modal"
 import { BiArrowBack } from "react-icons/bi"
 import TabContainer from "./TabContainer/TabContainer"
+import { upperCase } from "./utility"
 
 const Details = (props) => {
   const { isOpen, setIsOpen, pokemon } = props
@@ -35,13 +36,13 @@ const Details = (props) => {
               <span className="id">#{pokemon.id}</span>
             </div>
             <div className="name-types">
-              <h2>{pokemon.name}</h2>
+              <h2>{upperCase(pokemon.name)}</h2>
               <div className="types">
                 {pokemon.types.map((type, id) => {
                   return (
                     <>
                       <p className="type" key={id}>
-                        {type.type.name}
+                        {upperCase(type.type.name)}
                       </p>
                     </>
                   )

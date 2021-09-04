@@ -1,3 +1,5 @@
+import { upperCase } from "./utility"
+
 const EachPokemon = (props) => {
   const { pokemon, setIsOpen, setSelectedPokemon } = props
 
@@ -25,13 +27,13 @@ const EachPokemon = (props) => {
       >
         <div className="details">
           <span className="id">#{pokemon.id}</span>
-          <h2 className="title">{pokemon.name}</h2>
+          <h2 className="title">{upperCase(pokemon.name)}</h2>
           <div className="types">
             {pokemon.types.map((type, id) => {
               return (
                 <>
                   <p className="type" key={id}>
-                    {type.type.name}
+                    {upperCase(type.type.name)}
                   </p>
                 </>
               )

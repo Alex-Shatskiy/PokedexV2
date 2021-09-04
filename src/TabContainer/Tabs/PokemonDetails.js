@@ -1,9 +1,11 @@
+import { upperCase } from "../../utility"
+
 const PokemonDetails = (props) => {
   const { height, abilities, weight, exp } = props
 
   const eachAbilitie = abilities
     .map((t) => {
-      return t.ability.name.replace("-", " ")
+      return upperCase(t.ability.name).replace("-", " ")
     })
     .join(", ")
 

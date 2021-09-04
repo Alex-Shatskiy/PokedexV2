@@ -180,7 +180,7 @@ div {
   bottom: 0;
   background-color: var(--mColor);
   width: 50%;
-  height: 75%;
+  height: 85%;
   overflow: auto;
   align-items: center;
   border-radius: 3rem;
@@ -250,7 +250,9 @@ div {
   width: 6rem;
 }
 .type {
+  border-color: #37373891;
   width: 6rem;
+  background-color: #bcbcbc6b;
   border-style: solid;
   display: flex;
   border-radius: 2rem;
