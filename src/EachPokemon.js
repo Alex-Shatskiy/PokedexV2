@@ -18,7 +18,7 @@ const EachPokemon = (props) => {
   return (
     <div
       onClick={() => setSelectedPokemon(pokemon)}
-      className="card"
+      className="card-container"
       key={pokemon.id}
     >
       <div

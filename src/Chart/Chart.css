@@ -28,3 +28,7 @@
 .range-view.red::after {
   background-color: #fb7171;
 }
+
+.animate__animated.animate__fadeInRight {
+  --animate-duration: 1.5s;
+}

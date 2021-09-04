@@ -3,9 +3,17 @@ import { BiArrowBack } from "react-icons/bi"
 import TabContainer from "./TabContainer/TabContainer"
 import { upperCase } from "./utility"
 
+import "animate.css"
+
 const Details = (props) => {
   const { isOpen, setIsOpen, pokemon } = props
   console.log(props)
+
+  const closeModual = () => setIsOpen(false)
+
+  const overlay = () => {
+    setIsOpen(true)
+  }
 
   const photoChecker = (pokemon) => {
     if (pokemon.id < 650) {
@@ -23,13 +31,13 @@ const Details = (props) => {
   return (
     <>
       <Modal
-        className={`Modal type-${pokemon.types[0].type.name}`}
+        className={`Modal type-${pokemon.types[0].type.name}  `}
         overlayClassName="Overlay"
         isOpen={isOpen}
       >
         <div className="basicDetails">
           <div className="back">
-            <BiArrowBack onClick={() => setIsOpen(false)} size="40px" />
+            <BiArrowBack onClick={() => closeModual()} size="40px" />
           </div>
           <div className="top">
             <div className="id-container">
