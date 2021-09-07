@@ -36,7 +36,7 @@ function App() {
       <nav className="navBar">
         <img
           className="icon"
-          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.opiwiki.com%2Fpic%3Fw%3D6%26f%3D111497%26e%3D2%26o%3D703&f=1&nofb=1"
+          src="https://img1.pnghut.com/1/23/2/HFrLH30Zx3/wheel-area-symbol-pokemon-logo.jpg"
         />
         <h1>Pokedex</h1>
         <div className="search">
