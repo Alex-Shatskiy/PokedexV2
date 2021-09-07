@@ -1,5 +1,4 @@
 import { upperCase } from "../../utility"
-
 const PokemonDetails = (props) => {
   const { height, abilities, weight, exp } = props
 

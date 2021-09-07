@@ -11,6 +11,7 @@
 .bloc-tab {
   display: flex;
   width: 100%;
+  justify-content: center;
   border-bottom: solid;
   border-color: rgba(49, 49, 49, 0.041);
   margin-bottom: 25px;
@@ -18,7 +19,7 @@
 .tab {
   padding: 15px;
   text-align: center;
-  width: 10%;
+  width: 20%;
   cursor: pointer;
   box-sizing: content-box;
   position: relative;
@@ -80,6 +81,10 @@
   width: 14%;
 }
 
+.stat-value {
+  font-weight: 600;
+}
+
 .about-table {
   height: 100%;
   width: 100%;
@@ -91,4 +96,19 @@
 
 .about-name {
   width: 18%;
+}
+.about-data {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1200px) {
+  .bloc-tab {
+    justify-content: flex-start;
+  }
+  .tab {
+    width: 10%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
 }

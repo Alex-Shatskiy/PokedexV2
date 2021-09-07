@@ -3,6 +3,7 @@ import Pokemonetails from "./Tabs/PokemonDetails"
 import "./Tabs.css"
 import PokemonDetails from "./Tabs/PokemonDetails"
 import Stats from "./Tabs/Stats"
+import Evolution from "./Tabs/Evolution"
 
 const TabContainer = (props) => {
   const { pokemon } = props
@@ -28,12 +29,6 @@ const TabContainer = (props) => {
           >
             Stats
           </div>
-          <div
-            onClick={() => setTabs(3)}
-            className={activeTab === 3 ? "tab active-tab" : "tab"}
-          >
-            Evolution
-          </div>
         </div>
         <div className="content-tab">
           <div
@@ -51,12 +46,6 @@ const TabContainer = (props) => {
             className={activeTab === 2 ? "content active-content" : "content"}
           >
             <Stats stats={pokemon.stats} />
-          </div>
-
-          <div
-            className={activeTab === 3 ? "content active-content" : "content"}
-          >
-            <h1>Evolution</h1>
           </div>
         </div>
       </div>

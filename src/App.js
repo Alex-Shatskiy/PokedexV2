@@ -12,7 +12,6 @@ function App() {
     const results = await res.data.results
 
     for (let i = 0; i < results.length; i++) {
-      console.log(i)
       pokemonArray.push(await getPokemonData(results[i].name))
     }
 
