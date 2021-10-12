@@ -8,7 +8,7 @@ function App() {
   // limit=898
   const getAllPokemon = async () => {
     let pokemonArray = []
-    const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=50")
+    const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=898")
     const results = await res.data.results
 
     for (let i = 0; i < results.length; i++) {
@@ -36,7 +36,7 @@ function App() {
       <nav className="navBar">
         <img
           className="icon"
-          src="https://img1.pnghut.com/1/23/2/HFrLH30Zx3/wheel-area-symbol-pokemon-logo.jpg"
+          src="https://www.pngall.com/wp-content/uploads/4/Pokeball-PNG-Download-Image.png"
         />
         <h1>Pokedex</h1>
         <div className="search">
@@ -45,7 +45,15 @@ function App() {
         </div>
       </nav>
       <section className="pokedex">
-        <Pokedex search={filter} allPokemon={allPokemon} />
+        {allPokemon.length == 0 ? (
+          <>
+            <div className="loader-container">
+              <div className="loader"></div>
+            </div>
+          </>
+        ) : (
+          <Pokedex search={filter} allPokemon={allPokemon} />
+        )}
       </section>
     </div>
   )
