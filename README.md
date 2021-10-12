@@ -10,7 +10,7 @@ This project will use the Pokemon API from: [PokiAPI](https://pokeapi.co/).
 
 Insperation for this project came from [a dribble photo](https://dribbble.com/shots/6540871-Pokedex-App)
 
-#Live Demo
+Live Demo
 Link: https://alex-shatskiy.github.io/PokedexV2/
 
 ## Getting Started
