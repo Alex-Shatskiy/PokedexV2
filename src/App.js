@@ -8,7 +8,7 @@ function App() {
   // limit=898
   const getAllPokemon = async () => {
     let pokemonArray = []
-    const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=898")
+    const res = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=500")
     const results = await res.data.results
 
     for (let i = 0; i < results.length; i++) {
